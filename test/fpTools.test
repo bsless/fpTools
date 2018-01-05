@@ -44,3 +44,15 @@ test fpTools_identity0 {
 } -result x
 
 cleanupTests 1
+
+test fpTools_lmapIdentity {
+    Test: lmap e {1 2 3} {list $e} = {1 2 3}
+} -constraints {[info tclversion] < 8.6} -body {
+    lmap e {1 2 3} {list $e}
+} -result {1 2 3}
+
+test fpTools_lmapDouble {
+    Test: lmap e {1 2 3} {expr 2*$e} = {2 4 6}
+} -constraints {[info tclversion] < 8.6} -body {
+    lmap e {1 2 3} {expr 2*$e}
+} -result {2 4 6}
