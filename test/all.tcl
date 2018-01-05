@@ -7,12 +7,12 @@
 #
 # Lisence:
 #
-# Revision: 0
+# Revision: 1
 #
-# $
+# $Id$
 
 package require tcltest
 namespace import ::tcltest::*
 
-::tcltest::config
+::tcltest::configure -singleproc 1
 ::tcltest::runAllTests

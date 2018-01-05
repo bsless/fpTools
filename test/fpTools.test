@@ -13,10 +13,28 @@
 
 source ../src/fpTools.tcl
 
-tcltest::test fpTools_headEmptyList {
+test fpTools_headEmptyList {
     Test: fpTools::head {} = {}
 } -body {
     fpTools::head {}
 } -result {}
 
-::tcltest::cleanupTests 1
+test fpTools_headNonEmptyList {
+    Test: fpTools::head {1 2 3 {}} = {1}
+} -body {
+    fpTools::head {1 2 3 {}}
+} -result {1}
+
+test fpTools_tailEmptyList {
+    Test: fpTools::tail {} = {}
+} -body {
+    fpTools::tail {}
+} -result {}
+
+test fpTools_tailNonEmptyList {
+    Test: fpTools::tail {1 2 3 {}} = {1}
+} -body {
+    fpTools::tail {1 2 3 {}}
+} -result {2 3 {}}
+
+cleanupTests 1
