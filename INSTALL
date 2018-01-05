@@ -1,0 +1,14 @@
+1. Installsion
+In the project root dir, run the command:
+
+    make install
+
+2. Install Location
+The default install prefix is /usr/lib64/tcl
+To change the install location specify PREFIX:
+
+    make install PREFIX=path/to/install
+
+Make sure PREFIX is in your tcl auto_path and that
+a package index was created in it after installsion.
+

@@ -1,0 +1,24 @@
+# -*- mode: Tcl -*_
+# fpTools.test --
+#
+# Description:
+#
+# Copyright:
+#
+# Lisence:
+#
+# Revision: 0
+#
+# $
+
+source ../src/fpTools.tcl
+
+test fpTools_t0 {
+
+} -setup {
+
+} -body {
+
+} -result {}
+
+::tcltest::cleanupTests 1
