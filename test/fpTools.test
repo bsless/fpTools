@@ -56,3 +56,15 @@ test fpTools_lmapDouble {
 } -constraints {[info tclversion] < 8.6} -body {
     lmap e {1 2 3} {expr 2*$e}
 } -result {2 4 6}
+
+test fpTools_let0 {
+    Test:
+    fpTools::let \
+        {x 1} \
+        {y 2} \
+        {z {split "foo_bar" _}} \
+        {lindex $z [expr {$y - $x}]}
+    = bar
+} -body {
+    fpTools::let {x 1} {y 2} {z {split "foo_bar" _}} {lindex $z [expr {$y - $x}]}
+} -result {bar}
