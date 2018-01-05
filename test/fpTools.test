@@ -37,4 +37,10 @@ test fpTools_tailNonEmptyList {
     fpTools::tail {1 2 3 {}}
 } -result {2 3 {}}
 
+test fpTools_identity0 {
+    Test: fpTools::identity x = x
+} -body {
+    fpTools::identity x
+} -result x
+
 cleanupTests 1
