@@ -111,7 +111,8 @@ namespace eval fpTools {
     ##     }
     ##     puts "Just digits from (703)-999-0012= [digits (703)-999-0012]"
     ##     set names1 {Todd Coram Bob Jones Tim Druid}
-    ##     puts "From ($names1): Last,first = [lcomp {"$l,$f"} for {f l} in $names1]"
+    ##     puts "From ($names1): Last,first = \
+    ##           [lcomp {"$l,$f"} for {f l} in $names1]"
     ##     puts "From ($names1): Only names starting with 't':\
     ##         [lcomp {$f} for {f l} in $names1 if {[string match T* $f]}]"
     ##     puts "Create a matrix pairing {a b c} and {1 2 3}:\
