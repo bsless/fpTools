@@ -93,8 +93,8 @@ namespace eval fpTools {
         foreach pair $args {
             lassign $pair varname expression
             set h [head [split $expression]]
-            set cmd_q [info command $h]
-            set proc_q [info proc $h]
+            set cmd_q [info commands $h]
+            set proc_q [info procs $h]
             set $varname [expr {( $cmd_q != {} ) || ( $proc_q != {} ) ? [eval $expression] : $expression }]
         }
         return [eval $body]
@@ -113,9 +113,9 @@ namespace eval fpTools {
     ##     set names1 {Todd Coram Bob Jones Tim Druid}
     ##     puts "From ($names1): Last,first = [lcomp {"$l,$f"} for {f l} in $names1]"
     ##     puts "From ($names1): Only names starting with 't':\
-        ##         [lcomp {$f} for {f l} in $names1 if {[string match T* $f]}]"
+    ##         [lcomp {$f} for {f l} in $names1 if {[string match T* $f]}]"
     ##     puts "Create a matrix pairing {a b c} and {1 2 3}:\
-        ##         [lcomp {[list $n1 $n2]} for n1 in {a b c} for n2 in {1 2 3}]"
+    ##         [lcomp {[list $n1 $n2]} for n1 in {a b c} for n2 in {1 2 3}]"
     ##     lcomp {$x} for x in {0 1 2 3}                         ;# 0 1 2 3
     ##     lcomp {[list $y $x]} for {x y} in {0 1 2 3}           ;# {1 0} {3 2}
     ##     lcomp {$x ** 2} for x in {0 1 2 3}                    ;# 0 1 4 9

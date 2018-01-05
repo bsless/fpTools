@@ -1,4 +1,4 @@
-# -*- mode: Tcl -*_
+# -*- mode: Tcl -*-
 # fpTools.test --
 #
 # Description:
@@ -13,12 +13,10 @@
 
 source ../src/fpTools.tcl
 
-test fpTools_t0 {
-
-} -setup {
-
+tcltest::test fpTools_headEmptyList {
+    Test: fpTools::head {} = {}
 } -body {
-
+    fpTools::head {}
 } -result {}
 
 ::tcltest::cleanupTests 1

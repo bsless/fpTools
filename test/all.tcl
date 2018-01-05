@@ -1,4 +1,4 @@
-# -*- mode: Tcl -*_
+# -*- mode: Tcl -*-
 # all.tcl --
 #
 # Description:
@@ -12,6 +12,7 @@
 # $
 
 package require tcltest
-namespace import -force ::tcltest::*
+namespace import ::tcltest::*
 
+::tcltest::config
 ::tcltest::runAllTests
