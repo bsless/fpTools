@@ -1,0 +1,2 @@
+1. fpTools is a collection of general purpose procedures for functional programming.
+2. the package implements lmap for tcl8.5, list comprehensions, folding, zipping, memoization and grouping
